@@ -53,7 +53,9 @@ h2 { margin: 0 0 18px; font-size: 1.7rem; }
 .results-lead {
   margin: 0 0 26px;
   color: var(--muted);
-  max-width: 74ch;
+  max-width: 100%;
+  text-wrap: pretty;
+  line-height: 1.5;
 }
 .grid {
   display: grid;
@@ -113,6 +115,68 @@ h2 { margin: 0 0 18px; font-size: 1.7rem; }
   margin: 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+.materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 0;
+}
+.materials-section {
+  background: #efeff1;
+  border-top: 1px solid #d7d8dc;
+  border-bottom: 1px solid #d7d8dc;
+}
+.materials-section h2 {
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.materials-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 62px;
+  text-decoration: none;
+  color: #3575d7;
+  background: transparent;
+  border: 2px solid #d0d0d3;
+  border-radius: 0;
+  font-family: "Manrope", "Avenir Next", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0;
+  padding: 0 16px;
+}
+.materials-link:hover {
+  border-color: #9ab6e4;
+  background: #f7f8fc;
+}
+.materials-icon {
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.materials-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.materials-link-disabled {
+  color: #8a8f9f;
+  border-color: #d7d9df;
+}
+.materials-link-disabled .materials-icon {
+  opacity: 0.75;
+}
+.materials-subtext {
+  margin-left: 8px;
+  font-size: 0.9rem;
+  color: #8a8f9f;
 }
 .results-table-wrap {
   background: linear-gradient(145deg, #f8fbff 0%, #eef4ff 52%, #f4f8ff 100%);
@@ -231,6 +295,7 @@ pre {
   .grid { grid-template-columns: 1fr; }
   .author-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .heatmap-grid { grid-template-columns: 1fr; }
+  .materials-grid { grid-template-columns: 1fr; }
   .section { padding: 48px 0; }
   .hero { padding: 66px 0 40px; }
   .results-table-wrap {
@@ -240,4 +305,5 @@ pre {
 }
 @media (max-width: 480px) {
   .author-grid { grid-template-columns: 1fr; }
+  .materials-grid { grid-template-columns: 1fr; }
 }

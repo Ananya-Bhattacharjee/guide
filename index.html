@@ -18,12 +18,10 @@
       <div class="actions">
         <a class="btn nav-link" href="#authors">Authors</a>
         <a class="btn nav-link" href="#abstract">Abstract</a>
-        <a class="btn nav-link" href="#paper">Paper</a>
+        <a class="btn nav-link" href="#materials">Materials</a>
         <a class="btn nav-link" href="#teaser">Teaser</a>
         <a class="btn nav-link" href="#system-diagram">System</a>
         <a class="btn nav-link" href="#results">Results</a>
-        <a class="btn nav-link" href="#code">Code</a>
-        <a class="btn nav-link" href="#citation">BibTeX</a>
       </div>
     </div>
   </header>
@@ -81,10 +79,44 @@
       </div>
     </section>
 
-    <section id="paper" class="section">
+    <section id="materials" class="section materials-section">
       <div class="container">
-        <h2>Paper</h2>
-        <p>upcoming</p>
+        <h2>Materials</h2>
+        <div class="materials-grid">
+          <a class="materials-link" href="assets/paper.pdf" target="_blank" rel="noreferrer">
+            <span class="materials-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7z"/>
+                <path d="M14 2v5h5"/>
+                <path d="M9 15h6"/>
+                <path d="M9 19h6"/>
+              </svg>
+            </span>
+            <span class="materials-text">PDF</span>
+          </a>
+          <a class="materials-link" href="https://github.com/StanfordAI4HI/guide-public" target="_blank" rel="noreferrer">
+            <span class="materials-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"/>
+                <polyline points="8 6 2 12 8 18"/>
+              </svg>
+            </span>
+            <span class="materials-text">Code</span>
+          </a>
+          <div class="materials-link materials-link-disabled" aria-disabled="true">
+            <span class="materials-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M8 2h8"/>
+                <path d="M9 2v4h6V2"/>
+                <path d="M5 6h14v14H5z"/>
+                <path d="M8 11h8"/>
+                <path d="M8 15h5"/>
+              </svg>
+            </span>
+            <span class="materials-text">BibTeX</span>
+            <span class="materials-subtext">coming soon</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -111,7 +143,8 @@
     <section id="results" class="section">
       <div class="container">
         <h2>Results</h2>
-        <p class="results-lead">Summary of key outcome measures for GUIDE and control conditions, followed by diversity analysis of generated interaction types.</p>
+        <p class="results-lead">We evaluated GUIDE in a preregistered study with 237 participants, comparing it against a strong LLM-based <a href="https://aclanthology.org/2023.acl-long.555/" target="_blank" rel="noreferrer">cognitive restructuring system</a>.</p>
+        <p class="results-lead">GUIDE produced significantly greater stress reduction and better user experience. Participants also reported higher enjoyment, greater willingness to reuse the activity, and felt the experience more closely reflected what they shared. Beyond outcomes, GUIDE generated a genuine diversity of experiences, combining different CBT techniques and multimodal interaction types across participants.</p>
 
         <div class="results-table-wrap">
           <h3>Outcome Summary</h3>
@@ -220,29 +253,12 @@
                 <img src="assets/modality_cooccurrence_heatmap_cbt_dist_tight.png" alt="Interaction type usage heatmap across intervention combinations" />
               </div>
             </div>
-            <figcaption class="table-note">(a) Co-occurrence of interaction types across generated intervention experiences (diagonal = total usage; off-diagonal = pairwise co-occurrence). (b) Interaction type usage across intervention combinations. Values represent the proportion of sessions within each combination that include the interaction type; CR = Cognitive restructuring, BA = Behavioral activation, RS = Regulation strategies.</figcaption>
+            <figcaption class="table-note">Figure 3. (a) Co-occurrence of interaction types across generated intervention experiences (diagonal = total usage; off-diagonal = pairwise co-occurrence). (b) Interaction type usage across intervention combinations. Values represent the proportion of sessions within each combination that include the interaction type; CR = Cognitive restructuring, BA = Behavioral activation, RS = Regulation strategies.</figcaption>
           </figure>
         </div>
       </div>
     </section>
 
-    <section id="code" class="section alt">
-      <div class="container">
-        <h2>Code</h2>
-        <p>
-          <a href="https://github.com/StanfordAI4HI/guide-public" target="_blank" rel="noreferrer">
-            https://github.com/StanfordAI4HI/guide-public
-          </a>
-        </p>
-      </div>
-    </section>
-
-    <section id="citation" class="section alt">
-      <div class="container">
-        <h2>BibTeX</h2>
-        <p>upcoming</p>
-      </div>
-    </section>
   </main>
 
   <footer class="footer">
