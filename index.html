@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GUIDE: Project Page</title>
+  <meta name="description" content="Generative Experiences for Digital Mental Health Interventions: Evidence from a Randomized Study" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Project Page</p>
+      <h1>Generative Experiences for Digital Mental Health Interventions: Evidence from a Randomized Study</h1>
+      <div class="actions">
+        <a class="btn nav-link" href="#authors">Authors</a>
+        <a class="btn nav-link" href="#abstract">Abstract</a>
+        <a class="btn nav-link" href="#paper">Paper</a>
+        <a class="btn nav-link" href="#teaser">Teaser</a>
+        <a class="btn nav-link" href="#system-diagram">System</a>
+        <a class="btn nav-link" href="#results">Results</a>
+        <a class="btn nav-link" href="#code">Code</a>
+        <a class="btn nav-link" href="#citation">BibTeX</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="authors" class="section">
+      <div class="container">
+        <h2>Authors</h2>
+        <div class="author-grid">
+          <article class="author-card">
+            <a class="author-link" href="https://www.ananyabhattacharjee.com/" target="_blank" rel="noreferrer">
+              <img src="assets/authors/ananya-bhattacharjee.jpg" alt="Ananya Bhattacharjee" />
+              <p class="author-name">Ananya Bhattacharjee</p>
+            </a>
+            <p class="author-affiliation">Stanford University</p>
+          </article>
+          <article class="author-card">
+            <a class="author-link" href="https://www.michaelliut.ca/" target="_blank" rel="noreferrer">
+              <img src="assets/authors/michael-liut.jpg" alt="Michael Liut" />
+              <p class="author-name">Michael Liut</p>
+            </a>
+            <p class="author-affiliation">University of Toronto Mississauga</p>
+          </article>
+          <article class="author-card">
+            <a class="author-link" href="http://matthewjoerke.com" target="_blank" rel="noreferrer">
+              <img src="assets/authors/matthew-joerke.jpg" alt="Matthew Jörke" />
+              <p class="author-name">Matthew Jörke</p>
+            </a>
+            <p class="author-affiliation">Stanford University</p>
+          </article>
+          <article class="author-card">
+            <a class="author-link" href="https://cs.stanford.edu/~diyiy/" target="_blank" rel="noreferrer">
+              <img src="assets/authors/diyi-yang.jpg" alt="Diyi Yang" />
+              <p class="author-name">Diyi Yang</p>
+            </a>
+            <p class="author-affiliation">Stanford University</p>
+          </article>
+          <article class="author-card">
+            <a class="author-link" href="https://cs.stanford.edu/people/ebrun/" target="_blank" rel="noreferrer">
+              <img src="assets/authors/emma-brunskill.jpg" alt="Emma Brunskill" />
+              <p class="author-name">Emma Brunskill</p>
+            </a>
+            <p class="author-affiliation">Stanford University</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="abstract" class="section alt">
+      <div class="container">
+        <h2>Abstract</h2>
+        <p>
+          Digital mental health (DMH) tools have extensively explored personalization of interventions to users' needs and contexts. However, this personalization often targets what support is provided, not how it is experienced. Even well-matched content can fail when the interaction format misaligns with how someone can engage. We introduce generative experience as a paradigm for DMH support, where the intervention experience is composed at runtime. We instantiate this in GUIDE, a system that generates personalized intervention content and multimodal interaction structure through rubric-guided generation of modular components. In a preregistered study with N=237 participants, GUIDE significantly reduced stress (p=.02) and improved the user experience (p=.04) compared to an LLM-based cognitive restructuring control. GUIDE also supported diverse forms of reflection and action through varied interaction flows, while revealing tensions around personalization across the interaction sequence. This work lays the foundation for interventions that dynamically shape how support is experienced and enacted in digital settings.
+        </p>
+      </div>
+    </section>
+
+    <section id="paper" class="section">
+      <div class="container">
+        <h2>Paper</h2>
+        <p>upcoming</p>
+      </div>
+    </section>
+
+    <section id="teaser" class="section">
+      <div class="container">
+        <h2>Teaser</h2>
+        <figure class="card">
+          <img src="assets/teaser.png" alt="GUIDE teaser figure" />
+          <figcaption>Figure 1: GUIDE generates intervention experiences at runtime by composing interaction structures from user context and selected interventions. The system elicits context, selects an intervention, and constructs a multimodal experience using elements such as visual guidance and timed activities. The interfaces shown are illustrative snippets of generated UX.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="system-diagram" class="section">
+      <div class="container">
+        <h2>System Diagram</h2>
+        <figure class="card">
+          <img src="assets/system-diagram.png" alt="GUIDE system diagram" />
+          <figcaption>Figure 2: GUIDE has three main components: context elicitation, intervention selection, and UX selection.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="results" class="section">
+      <div class="container">
+        <h2>Results</h2>
+        <p class="results-lead">Summary of key outcome measures for GUIDE and control conditions, followed by diversity analysis of generated interaction types.</p>
+
+        <div class="results-table-wrap">
+          <h3>Outcome Summary</h3>
+          <div class="table-scroll">
+            <table class="results-table" aria-label="Summary of outcome measures for participants in GUIDE and control conditions">
+              <thead>
+                <tr>
+                  <th>Outcome</th>
+                  <th>GUIDE<br /><span>(M ± SD)</span></th>
+                  <th>Control<br /><span>(M ± SD)</span></th>
+                  <th>p</th>
+                  <th>Cohen&rsquo;s d</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="group-row">
+                  <td colspan="5">Primary outcomes</td>
+                </tr>
+                <tr class="sig-row">
+                  <td>Stress reduction*</td>
+                  <td>0.65 ± 0.7</td>
+                  <td>0.35 ± 0.8</td>
+                  <td>.02</td>
+                  <td>0.39</td>
+                </tr>
+                <tr class="sig-row">
+                  <td>User experience*</td>
+                  <td>0.49 ± 0.6</td>
+                  <td>0.33 ± 0.6</td>
+                  <td>.04</td>
+                  <td>0.27</td>
+                </tr>
+                <tr class="group-row">
+                  <td colspan="5">Exploratory outcomes</td>
+                </tr>
+                <tr>
+                  <td>Stress mindset improvement</td>
+                  <td>1.44 ± 3.1</td>
+                  <td>0.75 ± 3.5</td>
+                  <td>.09</td>
+                  <td>0.21</td>
+                </tr>
+                <tr>
+                  <td>Perceived personalization</td>
+                  <td>3.39 ± 1.1</td>
+                  <td>3.40 ± 1.1</td>
+                  <td>.60</td>
+                  <td>-0.01</td>
+                </tr>
+                <tr>
+                  <td>Perceived system understanding</td>
+                  <td>3.44 ± 1.0</td>
+                  <td>3.31 ± 1.0</td>
+                  <td>.20</td>
+                  <td>0.13</td>
+                </tr>
+                <tr class="sig-row">
+                  <td>Perceived reflection of user input*</td>
+                  <td>3.70 ± 0.9</td>
+                  <td>3.43 ± 1.0</td>
+                  <td>.04</td>
+                  <td>0.30</td>
+                </tr>
+                <tr class="sig-row">
+                  <td>Intent to reuse activity*</td>
+                  <td>3.26 ± 1.0</td>
+                  <td>2.90 ± 1.2</td>
+                  <td>.03</td>
+                  <td>0.33</td>
+                </tr>
+                <tr>
+                  <td>Intent to recommend activity</td>
+                  <td>3.22 ± 1.0</td>
+                  <td>3.00 ± 1.2</td>
+                  <td>.09</td>
+                  <td>0.20</td>
+                </tr>
+                <tr>
+                  <td>Activity length appropriateness</td>
+                  <td>3.43 ± 1.0</td>
+                  <td>3.49 ± 1.1</td>
+                  <td>.65</td>
+                  <td>-0.05</td>
+                </tr>
+                <tr class="sig-row">
+                  <td>Activity enjoyment*</td>
+                  <td>3.44 ± 1.0</td>
+                  <td>3.16 ± 1.0</td>
+                  <td>.04</td>
+                  <td>0.28</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="table-note">* p &lt; .05, ** p &lt; .01, *** p &lt; .001</p>
+        </div>
+
+        <div class="diversity-block">
+          <h3>Diversity of Generated Interaction Types</h3>
+          <figure class="card diversity-figure">
+            <div class="heatmap-grid">
+              <div class="heatmap-panel">
+                <img src="assets/modality_cooccurrence_heatmap.png" alt="Co-occurrence heatmap of interaction types across generated experiences" />
+              </div>
+              <div class="heatmap-panel heatmap-panel-wide">
+                <img src="assets/modality_cooccurrence_heatmap_cbt_dist_tight.png" alt="Interaction type usage heatmap across intervention combinations" />
+              </div>
+            </div>
+            <figcaption class="table-note">(a) Co-occurrence of interaction types across generated intervention experiences (diagonal = total usage; off-diagonal = pairwise co-occurrence). (b) Interaction type usage across intervention combinations. Values represent the proportion of sessions within each combination that include the interaction type; CR = Cognitive restructuring, BA = Behavioral activation, RS = Regulation strategies.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="code" class="section alt">
+      <div class="container">
+        <h2>Code</h2>
+        <p>upcoming</p>
+      </div>
+    </section>
+
+    <section id="citation" class="section alt">
+      <div class="container">
+        <h2>BibTeX</h2>
+        <p>upcoming</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 GUIDE Project</p>
+    </div>
+  </footer>
+  <script>
+    (() => {
+      const links = Array.from(document.querySelectorAll(".nav-link"));
+      const sectionById = new Map(
+        links
+          .map((link) => link.getAttribute("href") || "")
+          .filter((href) => href.startsWith("#"))
+          .map((href) => href.slice(1))
+          .map((id) => [id, document.getElementById(id)])
+          .filter(([, el]) => !!el)
+      );
+
+      const setActiveById = (id) => {
+        links.forEach((link) => {
+          const active = link.getAttribute("href") === `#${id}`;
+          link.classList.toggle("active", active);
+        });
+      };
+
+      const getActiveSectionId = () => {
+        const orderedIds = links
+          .map((link) => (link.getAttribute("href") || "").replace("#", ""))
+          .filter((id) => sectionById.has(id));
+        if (orderedIds.length === 0) return null;
+
+        const offset = 140;
+        const y = window.scrollY + offset;
+        let activeId = orderedIds[0];
+
+        for (const id of orderedIds) {
+          const el = sectionById.get(id);
+          if (!el) continue;
+          if (el.offsetTop <= y) activeId = id;
+          else break;
+        }
+        return activeId;
+      };
+
+      const updateActiveFromViewport = () => {
+        const id = getActiveSectionId();
+        if (id) setActiveById(id);
+      };
+
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          const id = (link.getAttribute("href") || "").replace("#", "");
+          if (id) setActiveById(id);
+        });
+      });
+
+      window.addEventListener("scroll", updateActiveFromViewport, { passive: true });
+      window.addEventListener("resize", updateActiveFromViewport);
+      window.addEventListener("hashchange", updateActiveFromViewport);
+      window.addEventListener("load", updateActiveFromViewport);
+      updateActiveFromViewport();
+    })();
+  </script>
+</body>
+</html>
