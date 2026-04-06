@@ -53,9 +53,11 @@ h2 { margin: 0 0 18px; font-size: 1.7rem; }
 .results-lead {
   margin: 0 0 26px;
   color: var(--muted);
-  max-width: 100%;
-  text-wrap: pretty;
+  max-width: 78ch;
   line-height: 1.5;
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
 }
 .grid {
   display: grid;
