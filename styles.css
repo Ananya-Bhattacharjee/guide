@@ -297,15 +297,64 @@ pre {
   .grid { grid-template-columns: 1fr; }
   .author-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .heatmap-grid { grid-template-columns: 1fr; }
-  .materials-grid { grid-template-columns: 1fr; }
-  .section { padding: 48px 0; }
-  .hero { padding: 66px 0 40px; }
+  .materials-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .section { padding: 36px 0; }
+  .hero { padding: 48px 0 26px; }
+  .container { width: min(1040px, 94vw); }
+  .actions { gap: 8px; margin-top: 18px; }
+  .actions {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: none;
+  }
+  .actions::-webkit-scrollbar { display: none; }
+  .btn { padding: 8px 12px; border-radius: 10px; font-size: 0.9rem; }
+  .btn { flex: 0 0 auto; }
+  h2 { margin-bottom: 12px; font-size: 1.45rem; }
+  .results-lead { margin-bottom: 14px; line-height: 1.45; }
+  .card { padding: 12px; border-radius: 12px; }
+  .card img { min-height: 0; border-radius: 8px; }
+  .author-grid { gap: 10px; }
+  .author-card { padding: 10px; }
+  .author-name { margin-top: 8px; font-size: 0.95rem; }
+  .author-affiliation { font-size: 0.82rem; line-height: 1.35; }
+  .materials-link {
+    min-height: 48px;
+    padding: 0 8px;
+    gap: 6px;
+    font-size: 0.88rem;
+  }
+  .materials-text { font-size: 0.88rem; }
+  .materials-subtext { display: none; }
   .results-table-wrap {
-    padding: 12px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+  .results-table th,
+  .results-table td {
+    padding: 8px 9px;
+    font-size: 0.9rem;
+  }
+  .heatmap-grid { gap: 10px; }
+  .heatmap-panel {
+    padding: 6px;
+    border-radius: 10px;
   }
   .heatmap-panel img { height: auto; }
+  .diversity-block { margin-top: 22px; }
+  .table-note { margin-top: 10px; line-height: 1.45; }
+  .footer { padding: 22px 0 30px; }
 }
 @media (max-width: 480px) {
-  .author-grid { grid-template-columns: 1fr; }
-  .materials-grid { grid-template-columns: 1fr; }
+  h1 { font-size: clamp(1.55rem, 7vw, 2rem); line-height: 1.2; }
+  .hero { padding: 42px 0 22px; }
+  .section { padding: 28px 0; }
+  .author-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .author-card img { aspect-ratio: 1 / 1; }
+  .materials-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .materials-link { min-height: 44px; font-size: 0.82rem; }
+  .materials-icon { width: 12px; height: 12px; }
+  .materials-text { font-size: 0.82rem; }
+  .results-table { min-width: 620px; }
 }
