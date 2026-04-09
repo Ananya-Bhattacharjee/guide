@@ -1,0 +1,379 @@
+1
+00:00:00,000 --> 00:00:03,540
+We introduce generative
+experience, a paradigm where the
+
+2
+00:00:03,600 --> 00:00:06,180
+interaction through which a
+mental health intervention is
+
+3
+00:00:06,180 --> 00:00:10,020
+enacted is not fixed in advance,
+but constructed at runtime from
+
+4
+00:00:10,020 --> 00:00:12,720
+the user's context and
+intervention demand. We
+
+5
+00:00:12,780 --> 00:00:16,380
+instantiate this paradigm in
+GUIDE, a system for generative
+
+6
+00:00:16,440 --> 00:00:19,740
+UI for interactive digital
+experiences. Our system, GUIDE,
+
+7
+00:00:19,740 --> 00:00:24,680
+has three components. First,
+context elicitation. GUIDE begins
+
+8
+00:00:24,680 --> 00:00:27,200
+with a short, structured
+conversation to understand the
+
+9
+00:00:27,200 --> 00:00:30,620
+user's situation, not just what
+they're stressed about, but how
+
+10
+00:00:30,620 --> 00:00:33,740
+they describe it, what feels
+within their control, what their
+
+11
+00:00:33,740 --> 00:00:37,400
+circumstances are right now.
+This gets distilled into a
+
+12
+00:00:37,400 --> 00:00:41,740
+summary that drives everything
+downstream. Second, intervention
+
+13
+00:00:41,740 --> 00:00:45,460
+selection. Given that context,
+GUIDE generates multiple
+
+14
+00:00:45,460 --> 00:00:48,700
+candidate interventions drawn
+from a broad space of CBT
+
+15
+00:00:48,700 --> 00:00:51,820
+informed strategies like
+cognitive restructuring,
+
+16
+00:00:52,060 --> 00:00:56,320
+behavioral activation, regulation
+techniques. Candidates are
+
+17
+00:00:56,320 --> 00:00:59,740
+evaluated by an LLM judge
+against rubrics developed with
+
+18
+00:00:59,740 --> 00:01:02,760
+clinical experts capturing
+things like safe sequencing,
+
+19
+00:01:02,760 --> 00:01:06,960
+feasibility, and specificity to
+the user's situation. The
+
+20
+00:01:06,960 --> 00:01:11,280
+highest scoring intervention is
+selected. Third, and this is the
+
+21
+00:01:11,280 --> 00:01:15,540
+new part, UX selection. Given
+the selected intervention in the
+
+22
+00:01:15,540 --> 00:01:19,080
+user's context, GUIDE generates
+the interaction experience
+
+23
+00:01:19,080 --> 00:01:23,120
+itself. It composes sequences of
+modular elements, audio
+
+24
+00:01:23,120 --> 00:01:27,680
+messages, timers, text inputs,
+visual components. The same
+
+25
+00:01:27,680 --> 00:01:30,140
+intervention can be enacted
+through different structures
+
+26
+00:01:30,140 --> 00:01:33,800
+depending on what the context
+calls for. A second set of
+
+27
+00:01:33,800 --> 00:01:37,100
+rubrics evaluates candidate
+experiences for usability
+
+28
+00:01:37,340 --> 00:01:41,680
+alignment with the intervention
+and specificity to the user. The
+
+29
+00:01:41,680 --> 00:01:45,940
+result is a combinatorial design
+space, not a fixed interface.
+
+30
+00:01:46,240 --> 00:01:50,020
+Every user gets a different form
+of UX structure. These three
+
+31
+00:01:50,020 --> 00:01:53,020
+stages mean that both what
+support is offered and how it is
+
+32
+00:01:53,020 --> 00:01:56,500
+experienced are generated at
+runtime, tailored to each
+
+33
+00:01:56,500 --> 00:02:00,780
+person's context and not fixed
+in advance. Let's see GUIDE in
+
+34
+00:02:00,780 --> 00:02:03,540
+action. Imagine a user is
+stressed about a job interview
+
+35
+00:02:03,540 --> 00:02:08,520
+tomorrow. They start by sharing
+their situation by typing or by
+
+36
+00:02:08,520 --> 00:02:12,720
+voice. GUIDE asks a few short,
+structured questions - what's
+
+37
+00:02:12,720 --> 00:02:16,200
+hardest about it? What feels
+within their control, what their
+
+38
+00:02:16,200 --> 00:02:19,560
+circumstances are right now?
+Once the conversation is
+
+39
+00:02:19,560 --> 00:02:23,060
+complete, the system distills it
+into a summary the user can read
+
+40
+00:02:23,060 --> 00:02:27,440
+and edit before anything else
+happens. Based on this context,
+
+41
+00:02:27,440 --> 00:02:30,920
+GUIDE selects an intervention
+and constructs a user experience
+
+42
+00:02:31,040 --> 00:02:33,920
+that can guide the user through
+a stress reduction activity.
+
+43
+00:02:34,400 --> 00:02:37,220
+Parts of it can contain an
+encouraging audio message
+
+44
+00:02:37,220 --> 00:02:40,840
+personalized to what the user
+shared, followed by a prompt to
+
+45
+00:02:40,840 --> 00:02:43,780
+verbalize their thoughts and
+plans out loud or in writing.
+
+46
+00:02:44,620 --> 00:02:47,500
+The audio reflects their
+specific situation. The follow
+
+47
+00:02:47,500 --> 00:02:50,560
+up prompt asks them to
+articulate what they'll do next.
+
+48
+00:02:50,860 --> 00:02:53,800
+But this is just one of many
+possible experiences GUIDE might
+
+49
+00:02:53,800 --> 00:02:57,460
+construct. The system could
+instead generate a timer-based
+
+50
+00:02:57,460 --> 00:03:01,560
+activity asking the user to
+spend 60 seconds on a focused
+
+51
+00:03:01,560 --> 00:03:05,160
+task before reflecting. Or a
+short video walking them through
+
+52
+00:03:05,220 --> 00:03:08,880
+a mindfulness or grounding
+exercise. Or a visual card pair
+
+53
+00:03:09,120 --> 00:03:12,780
+two contrasting frames helping
+the user picture the shift from
+
+54
+00:03:12,780 --> 00:03:16,200
+where they are now to where they
+could be. Or a guided Breathing
+
+55
+00:03:16,200 --> 00:03:19,080
+exercise to regulate before they
+engage with the harder
+
+56
+00:03:19,080 --> 00:03:22,520
+reflection work. Or a simple
+text based rehearsal activity.
+
+57
+00:03:22,820 --> 00:03:26,960
+Any of these experiences, any
+combination, any sequence, and
+
+58
+00:03:27,020 --> 00:03:31,100
+crucially, the content of each
+one reflects what this specific
+
+59
+00:03:31,100 --> 00:03:34,760
+person shared about their
+situation. The questions use
+
+60
+00:03:34,820 --> 00:03:40,240
+their words. The audio speaks to
+their context. The prompts point
+
+61
+00:03:40,240 --> 00:03:44,200
+to their next concrete step.
+None of it is templated, the
+
+62
+00:03:44,200 --> 00:03:47,620
+intervention, the modality, the
+structure, all of it is
+
+63
+00:03:47,620 --> 00:03:51,640
+constructed at runtime for this
+person, in this moment. We
+
+64
+00:03:51,640 --> 00:03:55,000
+evaluated GUIDE in a preregistered between participant
+
+65
+00:03:55,000 --> 00:03:58,300
+experiment with 237
+participants, comparing it
+
+66
+00:03:58,420 --> 00:04:02,100
+against a strong LLM based
+cognitive restructuring system.
+
+67
+00:04:02,580 --> 00:04:05,880
+GUIDE produced significantly
+greater stress reduction and
+
+68
+00:04:05,880 --> 00:04:09,480
+better user experience. Beyond
+outcomes, GUIDE generated a
+
+69
+00:04:09,480 --> 00:04:12,540
+genuine diversity of
+experiences, combining different
+
+70
+00:04:12,540 --> 00:04:15,660
+CBT techniques and multimodal
+interaction types across
+
+71
+00:04:15,660 --> 00:04:20,100
+participants. No two sessions
+were the same. In short, GUIDE
+
+72
+00:04:20,100 --> 00:04:23,540
+is a first step toward systems
+that adapt not just what support
+
+73
+00:04:23,540 --> 00:04:27,800
+is offered, but how it is
+experienced. Our results suggest
+
+74
+00:04:27,800 --> 00:04:31,400
+this capacity can improve mental
+health outcomes, and we believe
+
+75
+00:04:31,400 --> 00:04:34,460
+generative experience opens a
+promising direction for the
+
+76
+00:04:34,460 --> 00:04:36,740
+field. Thank you for watching
+this video. 
+

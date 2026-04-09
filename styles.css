@@ -79,6 +79,13 @@ h2 { margin: 0 0 18px; font-size: 1.7rem; }
   min-height: 220px;
   object-fit: cover;
 }
+.teaser-video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: #000;
+}
 .author-grid {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
