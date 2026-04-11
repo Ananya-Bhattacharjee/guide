@@ -34,6 +34,7 @@ h1 {
 .muted { color: #334155; font-weight: 600; }
 .authors, .affiliations { margin: 10px 0 0; color: var(--muted); }
 .actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 30px; }
+.section-nav { margin-top: 16px; }
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -53,11 +54,17 @@ h2 { margin: 0 0 18px; font-size: 1.7rem; }
 .results-lead {
   margin: 0 0 26px;
   color: var(--muted);
-  max-width: 78ch;
+  max-width: none;
   line-height: 1.5;
   overflow-wrap: normal;
   word-break: normal;
   hyphens: none;
+}
+.try-guide-copy {
+  margin: 0 0 18px;
+  color: var(--muted);
+  line-height: 1.55;
+  max-width: none;
 }
 .grid {
   display: grid;
@@ -127,7 +134,7 @@ h2 { margin: 0 0 18px; font-size: 1.7rem; }
 }
 .materials-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
   margin-top: 0;
 }
@@ -304,20 +311,20 @@ pre {
   .grid { grid-template-columns: 1fr; }
   .author-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .heatmap-grid { grid-template-columns: 1fr; }
-  .materials-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .materials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .section { padding: 36px 0; }
   .hero { padding: 48px 0 26px; }
   .container { width: min(1040px, 94vw); }
-  .actions { gap: 8px; margin-top: 18px; }
-  .actions {
+  .section-nav { gap: 8px; margin-top: 12px; }
+  .section-nav {
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 4px;
     scrollbar-width: none;
   }
-  .actions::-webkit-scrollbar { display: none; }
+  .section-nav::-webkit-scrollbar { display: none; }
   .btn { padding: 8px 12px; border-radius: 10px; font-size: 0.9rem; }
-  .btn { flex: 0 0 auto; }
+  .section-nav .btn { flex: 0 0 auto; }
   h2 { margin-bottom: 12px; font-size: 1.45rem; }
   .results-lead { margin-bottom: 14px; line-height: 1.45; }
   .card { padding: 12px; border-radius: 12px; }
@@ -359,7 +366,7 @@ pre {
   .section { padding: 28px 0; }
   .author-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .author-card img { aspect-ratio: 1 / 1; }
-  .materials-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .materials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .materials-link { min-height: 44px; font-size: 0.82rem; }
   .materials-icon { width: 12px; height: 12px; }
   .materials-text { font-size: 0.82rem; }

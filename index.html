@@ -8,19 +8,20 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css?v=20260409-1" />
+  <link rel="stylesheet" href="styles.css?v=20260410-2" />
 </head>
 <body>
   <header class="hero">
     <div class="container">
       <p class="eyebrow">Project Page</p>
       <h1>Generative Experiences for Digital Mental Health Interventions</h1>
-      <div class="actions">
+      <div class="actions section-nav">
         <a class="btn nav-link" href="#teaser">Demo Video</a>
+        <a class="btn nav-link" href="#try-guide">Try GUIDE</a>
         <a class="btn nav-link" href="#abstract">Abstract</a>
         <a class="btn nav-link" href="#materials">Materials</a>
         <a class="btn nav-link" href="#authors">Authors</a>
-        <a class="btn nav-link" href="#system-diagram">System</a>
+        <a class="btn nav-link" href="#system-diagram">System Diagram</a>
         <a class="btn nav-link" href="#results">Results</a>
       </div>
     </div>
@@ -37,6 +38,14 @@
             Your browser does not support the video tag.
           </video>
         </figure>
+      </div>
+    </section>
+
+    <section id="try-guide" class="section">
+      <div class="container">
+        <h2>Try GUIDE</h2>
+        <p class="try-guide-copy">Experience a generated intervention session in real time. For the best experience, please use a laptop or desktop.</p>
+        <a class="btn primary" href="https://my-ai-support-web.fly.dev/" target="_blank" rel="noreferrer">Open GUIDE</a>
       </div>
     </section>
 
@@ -73,19 +82,6 @@
             </span>
             <span class="materials-text">Code</span>
           </a>
-          <div class="materials-link materials-link-disabled" aria-disabled="true">
-            <span class="materials-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M8 2h8"/>
-                <path d="M9 2v4h6V2"/>
-                <path d="M5 6h14v14H5z"/>
-                <path d="M8 11h8"/>
-                <path d="M8 15h5"/>
-              </svg>
-            </span>
-            <span class="materials-text">BibTeX</span>
-            <span class="materials-subtext">coming soon</span>
-          </div>
         </div>
       </div>
     </section>
@@ -138,7 +134,7 @@
         <h2>System Diagram</h2>
         <figure class="card">
           <img src="assets/system-diagram.png" alt="GUIDE system diagram" />
-          <figcaption>Figure 2: GUIDE has three main components: context elicitation, intervention selection, and UX selection.</figcaption>
+          <figcaption>Figure: GUIDE has three main components: context elicitation, intervention selection, and UX selection.</figcaption>
         </figure>
       </div>
     </section>
@@ -150,7 +146,7 @@
         <p class="results-lead">GUIDE produced significantly greater stress reduction and better user experience. Participants also reported higher enjoyment, greater willingness to reuse the activity, and felt the experience more closely reflected what they shared. Beyond outcomes, GUIDE generated a genuine diversity of experiences, combining different CBT techniques and multimodal interaction types across participants.</p>
 
         <div class="results-table-wrap">
-          <h3>Outcome Summary</h3>
+          <h3>Table: Outcome Summary</h3>
           <div class="table-scroll">
             <table class="results-table" aria-label="Summary of outcome measures for participants in GUIDE and control conditions">
               <thead>
@@ -256,7 +252,7 @@
                 <img src="assets/modality_cooccurrence_heatmap_cbt_dist_tight.png" alt="Interaction type usage heatmap across intervention combinations" />
               </div>
             </div>
-            <figcaption class="table-note">Figure 3. (a) Co-occurrence of interaction types across generated intervention experiences (diagonal = total usage; off-diagonal = pairwise co-occurrence). (b) Interaction type usage across intervention combinations. Values represent the proportion of sessions within each combination that include the interaction type; CR = Cognitive restructuring, BA = Behavioral activation, RS = Regulation strategies.</figcaption>
+            <figcaption class="table-note">Figure: (a) Co-occurrence of interaction types across generated intervention experiences (diagonal = total usage; off-diagonal = pairwise co-occurrence). (b) Interaction type usage across intervention combinations. Values represent the proportion of sessions within each combination that include the interaction type; CR = Cognitive restructuring, BA = Behavioral activation, RS = Regulation strategies.</figcaption>
           </figure>
         </div>
       </div>
